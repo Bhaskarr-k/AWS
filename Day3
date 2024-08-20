@@ -1,0 +1,79 @@
+what is EC2 instance?
+- EC2 means Elastic compute cloud.
+- it provides on demand, sclaable computing capacity in the Amazon web services cloud.
+- An EC2 instance is a virtual server in the AWS cloud that allows users to run applications and manage workloads.
+- An EC2 instance is a virtual server in the AWS cloud.
+- when you launch EC2 instance , the instance type that you specify determines the hardware availble to your instance.
+- Each instance type offers a diffrent balance of compute , memory, network, and storage resources.
+
+Features of Amazon EC2?
+Amazon provides the folowing high level features.
+- instances:
+        virtual servers.
+- Amazon machine images:
+          preconfigured templates for your instances that package the components you need for your server(including the operating system and additional software).
+- instance types:
+          various configurations of CPU, memory, storage , networking capacity, and graphics hardware for your instances.
+- Amazon EBS volumes:
+        persistent storage volumes for your data usng Amazon Elastic block store.
+- instance store volumes:
+        secure login information for your instances.AWS stores the public key and store the privatre key ina secure placce.
+- security groups:
+         A virtual firewall that allows you to specify the protocols, ports, and source ip ranges that can reach your instances, and that destination ip ranges to which your instance can connect.
+
+
+Related services:
+- Services to use with Amazon EC2
+- You can use other AWS services with the instances that you deploy using Amazon EC2.
+
+Amazon EC2 Auto Scaling:
+- Helps ensure you have the correct number of Amazon EC2 instances available to handle the load for your application.
+
+AWS Backup:
+- Automate backing up your Amazon EC2 instances and the Amazon EBS volumes attached to them.
+
+Amazon CloudWatch:
+- Monitor your instances and Amazon EBS volumes.
+
+Elastic Load Balancing:
+- Automatically distribute incoming application traffic across multiple instances.
+
+Amazon GuardDuty:
+- Detect potentially unauthorized or malicious use of your EC2 instances.
+
+EC2 Image Builder:
+- Automate the creation, management, and deployment of customized, secure, and up-to-date server images.
+
+AWS Launch Wizard:
+- Size, configure, and deploy AWS resources for third-party applications without having to manually identify and provision individual AWS resources.
+
+AWS Systems Manager:
+- Perform operations at scale on EC2 instances with this secure end-to-end management solution.
+
+ACCESS AMAZON EC2:
+
+You can create and manage your Amazon EC2 instances using the following interfaces:
+
+Amazon EC2 console:
+- A simple web interface to create and manage Amazon EC2 instances and resources.
+- If you've signed up for an AWS account, you can access.
+- the Amazon EC2 console by signing into the AWS Management Console and selecting EC2 from the console home page.
+
+AWS Command Line Interface:
+- Enables you to interact with AWS services using commands in your command-line shell.
+- It is supported on Windows, Mac, and Linux. For more information about the AWS CLI
+
+AWS CloudFormation:
+- Amazon EC2 supports creating resources using AWS CloudFormation.
+- You create a template, in JSON or YAML format, that describes your AWS resources.
+- AWS CloudFormation provisions and configures those resources for you.
+- You can reuse your CloudFormation templates to provision the same resources multiple times, whether in the same Region and account or in multiple Regions and accounts.
+
+AWS SDKs:
+- If you prefer to build applications using language-specific APIs instead of submitting a request over HTTP or HTTPS.
+- AWS provides libraries, sample code, tutorials, and other resources for software developers.
+- These libraries provide basic functions that automate tasks such as cryptographically signing your requests, retrying requests, and handling error responses.
+
+AWS Tools for PowerShell:
+- A set of PowerShell modules that are built on the functionality exposed by the AWS SDK for .NET
+-The Tools for PowerShell enable you to script operations on your AWS resources from the PowerShell command line.
