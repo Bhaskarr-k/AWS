@@ -1,0 +1,79 @@
+what is Amazon VPC?
+- with Amazon virtual private cloud you can launch AW resources ina logically isolated virtual network that you have defined.
+- This virtual network closely resembles a traditional network that you'd operate in your own data center.
+- with the benefits of using the scalable infrastructure of AWS.
+
+Features of VPC?
+
+virtual private clouds:
+- A VPC is a virtual network that closely resembles a traditional network.
+- after you have create a VPC, you can add subnets.
+
+subnets:
+- A subnet is a range of IP addresses in your VPC.
+- A subnet must reside ina single availbility Zone.
+- after you add subnets, you can deploy AWS resources in your VPC.
+
+IP addressing:
+- you can assign IP addresses, both ipv4 to your VPCS and subnets.
+- you can also bring your your public ipv4 addresses and ipv6 GUA addresses to AWS.
+- allocate them to resources in your VPC , such as EC2 instances, NAT GATEWAYS, and netwrok load balancers.
+
+Routing:
+- use route tables to determine where network traffic from your subnet or gateway is directed.
+
+Gateways and endpoints:
+- A gateway connects your VPC to another network.
+
+peering connections:
+- use a VPC peering connection to route traffic between the resources in the VPCS.
+
+Traffic Mirroring:
+- copy network traffic from network interfaces and send it to security and monitoring appliances for deep packet inspection.
+
+Transit gateways:
+- use a transit gateway, which acts as a central hub.
+- Route traffic betweeen your VPCS, VPN connections, and AWS direct connect connections.
+
+VPC Flow Logs:
+- A flow log captures information baout the IP traffic going to and from network interfaces in your VPC.
+
+VPN connections:
+- connect your VPCS to your on-premises network using AWS virtual private network.
+
+Working with Amazon VPC?
+- You can create and manage your VPCs using any of the following interfaces:
+
+AWS Management Console:
+-  Provides a web interface that you can use to access your VPCs.
+
+AWS Command Line Interface (AWS CLI):
+- Provides commands for a broad set of AWS services, including Amazon VPC, and is supported on Windows, Mac, and Linux.
+
+AWS SDKs: 
+-  Provides language-specific APIs and takes care of many of the connection details.
+- such as calculating signatures, handling request retries, and error handling.
+
+Query API:
+-  Provides low-level API actions that you call using HTTPS requests. 
+-  Using the Query API is the most direct way to access Amazon VPC, but it requires that your application handle low-level details.
+-  such as generating the hash to sign the request, and error handling.
+
+pricing for Public IPv4 addresses:
+- public IPv4 addresses have the following types
+
+Elastic IP addresses (EIPs):
+- Static, public IPv4 addresses provided by Amazon that you can associate with an EC2 instance.
+- elastic network interface, or AWS resource.
+
+EC2 public Ipv4 addresses:
+- Public IPv4 addresses assigned to an EC2 instance by Amazon.
+- if the EC2 instance is launched into a default subnet or if the instance is launched into a subnet that’s been configured to automatically assign a public IPv4 address
+
+BYOIPv4 addresses:
+- Public IPv4 addresses in the IPv4 address range that you’ve brought to AWS using Bring your own IP addresses (BYOIP).
+
+Service-managed IPv4 addresses:
+ - Public IPv4 addresses automatically provisioned on AWS resources and managed by an AWS service.
+
+
