@@ -1,0 +1,55 @@
+AWS security groups:
+- A security group  controls the traffic that is allowed to reach and leave the resources that it is associated with.
+- For example after you associate a security group with an EC2 instance, it controls the inbound and outbound traffic for the instance.
+- when you create a VPC, it comes with a default security group.
+- you can create additional security groups for a VPC, each with their own inbound and outbound rules.
+- you can specify the source, port and range and protocall for each inbound rule.
+security group basics:
+- you can assign a security group only to resources created in the same VPC as the security group.
+- you can assign multiple security groups to a resource.
+- when you create a security group, you mustt provide it with a named and description.
+- The following rules apply:
+     - A security group name must be unique within the VPC.
+     - Names and descriptions can be up to 255 characters in length.
+     - Names and descriptions are limited to the following characters:
+                          a-z,A-Z,0-9, spaces, and ._-:/()#,@[]+=&;{}!$*.
+     - when the name contains trailing spaces, we trim the space at the end of the name, we store it as "Test Security Group".
+     - A Security group name cannot start with sg-.
+- security groups are stateful.for example, if you send a request from an instance, the response traffic for that request is allowed to reach the instance regardless of the inbound security group rules.
+- Responses to allowed inbound traffic are allowed to leave the instance, regardless of the outbound rules.
+- security groups do not filter destinated to and from the following.
+      - Amazon Domain Name Services (DNS)
+      - Amazon Dynamic Host Configuration Protocol (DHCP)
+      - Amazon EC2 instance metadata
+      - Amazon ECS task metadata endpoints
+      - License activation for Windows instances
+      - Amazon Time Sync Service
+      - Reserved IP addresses used by the default VPC router
+
+Security group example:
+- The following diagram shows a VPC with two security groups and two subnets.
+- The instances in subnet A have the same connectivity requirements, so they are associated with security group 1.
+- The instances in subnet B have the same connectivity requirements, so they are associated with security group 2.
+- The security group rules allow traffic as follows:
+     - The first inbound rule in security group 1 allows SSH traffic to the instances in subnet A from the specified address range (for example, a range in your own network).
+     - The second inbound rule in security group 1 allows the instances in subnet A to communicate with each other using any protocol and port.
+     - The first inbound rule in security group 2 allows the instances in subnet B to communicate with each other using any protocol and port.
+     - The second inbound rule in security group 2 allows the instances in subnet A to communicate with the instances in subnet B using SSH.
+     - Both security groups use the default outbound rule, which allows all traffic. 
+
+NACLs:
+- Network Access management control levels.
+
+security group:
+- Operates at the instance level
+- Applies to an instance only if it is associated with the instance
+- Supports allow rules only
+- Evaluates all rules before deciding whether to allow traffic
+- Stateful: Return traffic is allowed, regardless of the rules
+
+Network ACL:
+- Operates at the subnet level
+- Applies to all instances deployed in the associated subnet (providing an additional layer of definse if security group rules are too permissive)
+- Supports allow rules and deny rules
+- Evaluates rules in order, starting with the lowest numbered rule, when deciding whether to allow traffic
+- Stateless: Return traffic must be explicitly allowed by the rules
