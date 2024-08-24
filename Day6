@@ -1,0 +1,67 @@
+Amazon Route 53:
+- Amazon Route 53 is a highly available and scalable Domain name system(DNS) web service. 
+- Route 53 connects user requests to internet applications running on AWS or on-premises.
+
+key features:
+Route 53 Resolver:
+- get recursive DNS for your Amazon VPCS in AWS Regions, VPCs AWS outposts racks or any other on premises networks.
+- create conditional forwarding rules an Route 53 endpoints to resolve custom names mastered in Amazon Route 53 private hosted zones or in your on-premieses DNS servers.
+
+Route 53 Profiles:
+- Manage one or more sharable configurations for Route 53, including private hosted zones.
+- Route 53 resolver DNS firewall rule groups
+- Route 53 resolver rules, in the form of a profile.
+- Automatically applies such configurations across VPCs and AWS accounts, even as new resources are added or updated.
+
+Traffic flow:
+- Easy to uses and cost effective global traffic management.
+- route end uers to the best endpoint for your application based on Geoproximity, latency, health, and other considerations.
+
+Geoproximity routing:
+- improves application responsiveness for your end users and helps data residency preferences by routing traffic to the geographically nearest resource.
+
+Latency based routing:
+- Route end users to the AWS region that provides the lowest possible latency.
+
+IP-Based routing:
+- fine-tune your DNS routing approach based on the classes inter domain routing block that the query originating IP address belong to.
+
+Geo DNS:
+- Route end users to a particular endpoint that you specify based on the end users geographic location.
+
+DNS failover:
+- Automatically route your website visitors to an alternate location to avoid site outages.
+
+Health checks and Monitoring:
+- Amazon route 53 can monitor the health and performence of your applications as well as web servers and other resources.
+
+Domain Registration:
+- Amazon Route 53 offers domain name registration service, where you can search for and register available domains names or transfer in existing domain names to be managed by route 53.
+
+CloudFront Zone Apex Support:
+- When using Amazon CloudFront to deliver your website content, visitors to your website can now access your site at the zone apex (or "root domain").
+
+S3 Zone Apex Support:
+- Amazon Route 53 is integrated with Elastic Load Balancing (ELB).
+
+About DNS:
+- The Domain Name System (DNS) is a globally distributed service that is foundational to the way people use the Internet.
+- DNS uses a hierarchical name structure, and different levels in the hierarchy are each separated with a dot ( . ).
+- Consider the domain names www.amazon.com and aws.amazon.com. In both these examples, “com” is the Top-Level Domain and “amazon” the Second-Level Domain. 
+- Route 53 is an “authoritative DNS” system.
+- An authoritative DNS system provides an update mechanism that developers use to manage their public DNS names.
+- The name for our service (Route 53) comes from the fact that DNS servers respond to queries on port 53 and provide answers that route end users to your applications on the Internet.
+
+Working with Amazon Route 53's APIs:
+- Route 53 provides a simple set of APIs that make it easy to create and manage DNS records for your domains.
+- You can call these directly; all this functionality can also be accessed via the AWS Management Console. 
+- Amazon Route 53 API Reference Guide. Some of the most commonly used APIs and their functionality are listed below:
+   - CreateHostedZone: Creates a new hosted zone to contain your DNS data. After creating a Hosted Zone, you receive four name servers to which you can delegate your domain.
+   - GetHostedZone: Lists information about a specific hosted zone.
+   - DeleteHostedZone: Deletes a hosted zone.
+   - ChangeResourceRecordSets: Populates and edits the DNS resource records in a hosted zone.
+   - ListResourceRecordSets: Retrieves either all the resource record sets in a hosted zone or filtered by record name and type.
+   - CheckAvailability: Checks the availability of one domain.
+   - RegisterDomain: Registers the requested domain.
+- 
+
